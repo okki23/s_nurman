@@ -63,7 +63,7 @@
 																				<option value="">--Pilih--</option>
 																				<?php
 																				foreach ($list_barang as $row) {
-																					echo "<option value=".$row->id."> ".$row->kode_produk." - ".$row->nama_produk." </option>";
+																					echo "<option value=".$row->kode_produk." - ".$row->nama_produk."> ".$row->kode_produk." - ".$row->nama_produk." </option>";
 																				}
 																				?>
 																			</select>
@@ -76,9 +76,9 @@
 																	<div class="col-md-9">
 																		<select name="jenis_keluhan" id="jenis_keluhan" class="form-control">
 																			<option value="">--Pilih--</option>
-																			<option value="1">Service</option>
-																			<option value="2">Claim Produk</option>
-																			<option value="3">Lainnya</option>
+																			<option value="service">Service</option>
+																			<option value="claim">Claim Produk</option>
+																			<option value="lainnya">Lainnya</option>
 																		</select>
 																	</div>
 															 </div>
@@ -94,7 +94,7 @@
 																 </label>
 																 <div class="col-md-9">
 																		 <input type="file" name="foto_keluhan"   id="foto_keluhan"  class="form-control" />
-																		  <input type="text" name="foto_keluhanx"   id="foto_keluhanx"  class="form-control" />
+																		  <input type="hidden" name="foto_keluhanx"   id="foto_keluhanx"  class="form-control" />
 																 </div>
 															</div>
 															 <div class="form-group">

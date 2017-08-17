@@ -110,43 +110,19 @@
 						    <span>Master</span>
 					    </a>
 						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('pegawai'); ?>">Pegawai</a></li>
-						    <li><a href="<?php echo base_url('supplier'); ?>">Supplier</a></li>
-								<li><a href="<?php echo base_url('goods'); ?>">Bahan Baku</a></li>
+						    <li><a href="<?php echo base_url('produk'); ?>">Produk</a></li>
+						    <li><a href="<?php echo base_url('service_center'); ?>">Service Center</a></li>
+								<li><a href="<?php echo base_url('pegawai'); ?>">Pegawai</a></li>
 						    <li><a href="<?php echo base_url('user'); ?>">User</a></li>
 						</ul>
 					</li>
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('req_goods'); ?>">Request Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('rec_goods'); ?>">Receive Bahan Baku</a></li>
-								<li><a href="<?php echo base_url('using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('res_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Laporan</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('rep_using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('rep_result_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
 
 
 					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
 
 				</ul>
 				<?php
-			}else if($user_group == 'PPIC'){
+			}else if($user_group == 'ADMIN TEKNISI'){
 				?>
 				<ul class="nav">
 					<div style="margin-top:10px;"> &nbsp; </div>
@@ -159,7 +135,7 @@
 						    <span>Transaksi</span>
 					    </a>
 						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('req_goods'); ?>">Request Bahan Baku</a></li>
+						    <li><a href="<?php echo base_url('assign_task'); ?>">Assignmen Tugas</a></li>
 
 						</ul>
 					</li>
@@ -170,7 +146,7 @@
 
 				</ul>
 				<?php
-			  }else if($user_group == 'PURCHASING'){
+			}else if($user_group == 'TEKNISI'){
 				?>
 				<ul class="nav">
 					<div style="margin-top:10px;"> &nbsp; </div>
@@ -183,7 +159,8 @@
 						    <span>Transaksi</span>
 					    </a>
 						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('req_goods'); ?>">Request Bahan Baku</a></li>
+						    <li><a href="<?php echo base_url('my_todolist'); ?>">My To Do List</a></li>
+								<li><a href="<?php echo base_url('my_activity'); ?>">My Activity</a></li>
 
 						</ul>
 					</li>
@@ -192,7 +169,7 @@
 
 				</ul>
 				<?php
-			  }else if($user_group == 'ADMIN WAREHOUSE'){
+			}else if($user_group == 'SUPERVISOR'){
 				?>
 				<ul class="nav">
 					<div style="margin-top:10px;"> &nbsp; </div>
@@ -202,11 +179,11 @@
 						<a href="javascript:;">
 						    <b class="caret pull-right"></b>
 						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
+						    <span>Report</span>
 					    </a>
 						<ul class="sub-menu">
 
-						    <li><a href="<?php echo base_url('rec_goods'); ?>">Receive Bahan Baku</a></li>
+						    <li><a href="<?php echo base_url('rep_task'); ?>">Progress Report</a></li>
 
 						</ul>
 					</li>
@@ -216,58 +193,8 @@
 
 				</ul>
 				<?php
-				}else if($user_group == 'ADMIN PRODUKSI'){
-				?>
-
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
-
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-
-								<li><a href="<?php echo base_url('using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('res_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-
-
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-				<?php
-			  }else if($user_group == 'SUPERVISOR'){
-				?>
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
-
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Laporan</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('rep_using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('rep_result_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-
-				<?php
-				}
-				 ?>
+		 }
+			 ?>
 
 
 
@@ -423,6 +350,32 @@
 				format: 'yyyy-mm-dd'
 			});
 
+
+
+			$("#foto_produkx").on("change",function(){
+				var filename = $('#foto_produkx').val().replace(/C:\\fakepath\\/i, '');
+				$("#foto_produk").val(filename);
+			});
+			$("#foto_scx").on("change",function(){
+				var filename = $('#foto_scx').val().replace(/C:\\fakepath\\/i, '');
+				$("#foto_sc").val(filename);
+			});
+
+			/*photo before assign*/
+
+			$("#photo_before_assignx").on("change",function(){
+				var filename = $('#photo_before_assignx').val().replace(/C:\\fakepath\\/i, '');
+				$("#photo_before_assign").val(filename);
+			});
+
+			$("#photo_after_assignx").on("change",function(){
+				var filename = $('#photo_after_assignx').val().replace(/C:\\fakepath\\/i, '');
+				$("#photo_after_assign").val(filename);
+			});
+
+
+				/*photo before assign*/
+
 			$("#select_id_barang").on("change",function(){
 				var isi = $(this).val();
 
@@ -450,6 +403,7 @@
 				});
 
 			});
+
 
 			$("#kode_produksi").on("change",function(){
 				var isi = $(this).val();

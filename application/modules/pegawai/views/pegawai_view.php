@@ -11,7 +11,7 @@
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
                             </div>
-                            <h4 class="panel-title">EMPLOYEE MANAGEMENT</h4>
+                            <h4 class="panel-title">EMPLOYEE MANAGEMENT  </h4>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -20,62 +20,32 @@
 															<br>
 															&nbsp;
 																 <table id="data-table" class="table table-striped table-bordered">
-                                    <thead>
-																			  <tr>
-																						<th>No</th>
-                                            <th>NIK</th>
-                                            <th>Nama</th>
-                                            <th>Telepon</th>
-																						<th>Email</th>
-																						<th>Alamat</th>
-                                            <th>Opsi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-																			<?php
-																			$no = 1;
-																			foreach ($listing as $row) {
-																			?>
+                                   <thead>
+                                     <tr>
 
-																			<tr>
-																					<td><?php echo $no; ?></td>
-																					<td><?php echo $row->nik; ?></td>
-																					<td><?php echo $row->nama; ?></td>
-																					<td><?php echo $row->no_telp; ?></td>
-																					<td><?php echo $row->email; ?></td>
-																					<td><?php echo $row->alamat; ?></td>
+                                       <th>NIK</th>
+                                       <th>Nama</th>
+                                       <th>Alamat</th>
+                                       <th>Kontak</th>
+                                       <th>Opsi</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                      <?php
+                                      foreach($listing->result() as $row){
+                                      ?>
+                                      <tr class="gradeX">
 
-																					<td>
-																						<a class="btn btn-warning" href="<?php echo base_url('pegawai/store/'.$row->id); ?>">  <i class="fa fa-pencil"></i> Edit </a>   &nbsp;
-																						<a class="btn btn-danger" onclick="javascript:return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo base_url('pegawai/delete/'.$row->id); ?>"> <i class="fa fa-trash"></i> Delete </a>
-																					</td>
-
-																			</tr>
-
-																			<?php
-																			$no++;
-																			}
-																			?>
-
-
-                                        <!--
-																				<tr class="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 4.0</td>
-                                            <td>Win 95+</td>
-                                            <td>4</td>
-
-                                        </tr>
-                                        <tr class="even gradeC">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.0</td>
-                                            <td>Win 95+</td>
-                                            <td>5</td>
-
-                                        </tr>
-																			-->
-
-                                    </tbody>
+                                       <td><?php echo $row->nik; ?></td>
+                                       <td><?php echo $row->nama; ?></td>
+                                       <td><?php echo $row->alamat; ?></td>
+                                       <td><?php echo "No.Telp : " .$row->no_telp. "Email : " .$row->email; ?></td>
+                                       <td class="center"><a href="<?php echo base_url('pegawai/store/'.$row->id); ?>"> Edit </a> &nbsp; | &nbsp; <a href="<?php echo base_url('pegawai/delete/'.$row->id); ?>"> Delete </a></td>
+                                     </tr>
+                                     <?php
+                                     }
+                                     ?>
+                                   </tbody>
                                 </table>
                             </div>
                         </div>

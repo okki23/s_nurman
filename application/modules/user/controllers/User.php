@@ -10,7 +10,7 @@ class User extends Parent_controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('m_user','m_umanagement');
-       
+
         if ($this->session->userdata('username') == '') {
             redirect(base_url('login'));
         }

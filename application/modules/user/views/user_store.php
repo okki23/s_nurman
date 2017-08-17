@@ -145,11 +145,10 @@
 																		<select name="level" class="form-control selectpicker" data-size="10" data-live-search="true" data-style="btn-white">
 																					<option value = "">--Pilih--</option>
 																					<option value = "1" <?php if($parseform->level == '1') { echo "selected=selected"; }  ?> >Super Admin</option>
-																					<option value = "2" <?php if($parseform->level == '2') { echo "selected=selected"; }  ?> >PPIC</option>
-																					<option value = "3" <?php if($parseform->level == '3') { echo "selected=selected"; }  ?> >Admin Produksi</option>
-																					<option value = "4" <?php if($parseform->level == '4') { echo "selected=selected"; }  ?> >Purchasing</option>
-																					<option value = "5" <?php if($parseform->level == '5') { echo "selected=selected"; }  ?> >Supervisor</option>
-
+																					<option value = "2" <?php if($parseform->level == '2') { echo "selected=selected"; }  ?> >Admin Teknisi</option>
+																					<option value = "3" <?php if($parseform->level == '3') { echo "selected=selected"; }  ?> >Teknisi</option>
+																					<option value = "4" <?php if($parseform->level == '4') { echo "selected=selected"; }  ?> >Supervisor</option>
+																					  
 																	  </select>
 															 		</div>
 															 </div>

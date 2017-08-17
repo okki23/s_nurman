@@ -53,7 +53,17 @@ foto_sc
 																					<td><?php echo $row->nama_sc; ?></td>
 																					<td><?php echo $row->alamat_sc; ?></td>
 																					<td><?php echo "Telp : ". $row->telp_sc. "<br>Email : ". $row->email_sc; ?></td>
-																					<td><?php echo $row->telp_sc; ?></td>
+																					<?php
+																					if($row->foto_sc == '' || $row->foto_sc == NULL ){
+																					?>
+																					<td> <h4 align="center"> Image Not Found! </h4> </td>
+																					<?php
+																					}else{
+																					?>
+																					<td> <div align="center"> <img src="<?php echo base_url("uploads/".$row->foto_sc); ?>" style="width:25%; height:25%;" > </div> </td>
+																					<?php
+																					}
+																					?>
 
 
 

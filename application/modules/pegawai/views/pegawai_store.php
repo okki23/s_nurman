@@ -103,46 +103,50 @@
                          </div>
 
                          <div class="panel-body">
+
                              <form class="form-horizontal" action="<?php echo base_url('pegawai/save'); ?>" method="POST">
 															 <input type="hidden" name="id" value="<?php echo $parseform->id; ?>">
 															 <div class="form-group">
-
-
 															 		<label class="col-md-3 control-label">NIK
 																	</label>
 															 		<div class="col-md-9">
-															 				<input type="text" name="nik" value="<?php echo $parseform->nik; ?>" class="form-control"   />
+															 				<input type="text" name="nik" value="<?php echo $parseform->nik; ?>" class="form-control" />
 															 		</div>
 															 </div>
-															 <div class="form-group">
-															 		<label class="col-md-3 control-label">Nama</label>
+                               <div class="form-group">
+															 		<label class="col-md-3 control-label">Nama
+																	</label>
 															 		<div class="col-md-9">
-															 				<input type="text" name="nama" class="form-control"  value="<?php echo $parseform->nama; ?>" />
+															 				<input type="text" name="nama" value="<?php echo $parseform->nama; ?>" class="form-control"  />
 															 		</div>
 															 </div>
-															 <div class="form-group">
-															 		<label class="col-md-3 control-label">Email</label>
+                               <div class="form-group">
+															 		<label class="col-md-3 control-label">Alamat
+																	</label>
 															 		<div class="col-md-9">
-															 				<input type="text" name="email" class="form-control"  value="<?php echo $parseform->email; ?>" />
+															 				<input type="text" name="alamat" value="<?php echo $parseform->alamat; ?>" class="form-control"   />
 															 		</div>
 															 </div>
-															 <div class="form-group">
-															 		<label class="col-md-3 control-label">No Telp</label>
+                               <div class="form-group">
+															 		<label class="col-md-3 control-label">No Telp
+																	</label>
 															 		<div class="col-md-9">
-															 				<input type="text" name="no_telp" class="form-control"  value="<?php echo $parseform->no_telp; ?>" />
+															 				<input type="text" name="no_telp" value="<?php echo $parseform->no_telp; ?>" class="form-control"   />
 															 		</div>
 															 </div>
-															 <div class="form-group">
-															 		<label class="col-md-3 control-label">Alamat</label>
+                               <div class="form-group">
+															 		<label class="col-md-3 control-label">Email
+																	</label>
 															 		<div class="col-md-9">
-															 				<input type="text" name="alamat" class="form-control"  value="<?php echo $parseform->alamat; ?>" />
+															 				<input type="text" name="email" value="<?php echo $parseform->email; ?>" class="form-control"   />
 															 		</div>
 															 </div>
+
 
 
 															 <div  align="center">
 															 		<button type="submit" name="save" class="btn btn-large btn-primary" > <i class="fa fa-archive"></i> Save </button>
-																	<a class="btn btn-danger" href="<?php echo base_url('pegawai'); ?>"> <i class="fa fa-reply-all"></i> Back </a>
+																	<a class="btn btn-danger" href="<?php echo base_url('user'); ?>"> <i class="fa fa-reply-all"></i> Back </a>
 															 </div>
 																 <!-- <div class="form-group">
                                      <label class="col-md-3 control-label">Default Input</label>

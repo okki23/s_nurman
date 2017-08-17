@@ -71,7 +71,16 @@
 				<!-- end mobile sidebar expand / collapse button -->
 
 				<!-- begin header navigation right -->
+				<ul class="nav navbar-nav navbar-right">
 
+
+					<li class="dropdown navbar-user">
+
+						<ul class="dropdown-menu animated fadeInLeft"
+							<li><a href="<?php echo base_url('login'); ?>">Login</a></li>
+						</ul>
+					</li>
+				</ul>
 				<!-- end header navigation right -->
 			</div>
 			<!-- end container-fluid -->
@@ -91,6 +100,8 @@
  <span>Daftar LG Service Center</span></a></li>
 					<li><a href="<?php echo base_url('form_claim_user'); ?>"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
  <span>Form Keluhan Konsumen</span></a></li>
+ <li><a href="<?php echo base_url('login'); ?>"><i class="fa fa-user" aria-hidden="true"></i>
+<span>Login</span></a></li>
 
 
 					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>

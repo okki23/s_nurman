@@ -11,7 +11,7 @@
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
                             </div>
-                            <h4 class="panel-title">SERVICE CENTER MANAGEMENT</h4>
+                            <h4 class="panel-title">SERVICE CENTER MANAGEMENT  </h4>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -20,57 +20,46 @@
 															<br>
 															&nbsp;
 																 <table id="data-table" class="table table-striped table-bordered">
-                                    <thead>
-																			  <tr>
-																						<th>No</th>
-                                            <th>Nama Barang</th>
-                                            <th>Qty</th>
-                                            <th>Satuan</th>
-                                            <th>Opsi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-																			<?php
-																			$no = 1;
-																			foreach ($listing as $row) {
-																			?>
+                                   <thead>
+                                     <tr> 
+                                       <th>Kode Service Center</th>
+                                       <th>Nama Service Center</th>
+                                       <th>Alamat Service Center</th>
+																			 <th>PIC Service Center</th>
+																			 <th>Kontak Service Center</th>
+																			 <th>Foto Service Center</th>
+                                       <th>Opsi</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                      <?php
+                                      foreach($listing->result() as $row){
+                                      ?>
+                                      <tr class="gradeX">
 
-																			<tr>
-																					<td><?php echo $no; ?></td>
-																					<td><?php echo $row->nama_barang; ?></td>
-																					<td><?php echo $row->qty; ?></td>
-																					<td><?php echo $row->satuan; ?></td>
-																					<td>
-																						<a class="btn btn-warning" href="<?php echo base_url('service_center/store/'.$row->id); ?>">  <i class="fa fa-pencil"></i> Edit </a>   &nbsp;
-																						<a class="btn btn-danger" onclick="javascript:return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo base_url('service_center/delete/'.$row->id); ?>"> <i class="fa fa-trash"></i> Delete </a>
-																					</td>
+                                       <td><?php echo $row->kode_sc; ?></td>
+                                       <td><?php echo $row->nama_sc; ?></td>
+																			 <td><?php echo $row->alamat_sc; ?></td>
+																			 <td><?php echo $row->pic_sc; ?></td>
+																			 <td><?php echo "Telp : " .$row->telp_sc. "Email : " .$row->email_sc; ?></td>
+																			 <?php
+																			 if($row->foto_sc == '' || $row->foto_sc == NULL ){
+																			 ?>
+   																	 	 <td> <h4 align="center"> Image Not Found! </h4> </td>
+																			 <?php
+																		 	 }else{
+																			 ?>
+																			 <td> <div align="center"> <img src="<?php echo base_url("uploads/".$row->foto_sc); ?>" style="width:25%; height:25%;" > </div> </td>
+																			 <?php
+																		   }
+																			 ?>
 
-																			</tr>
-
-																			<?php
-																			$no++;
-																			}
-																			?>
-
-
-                                        <!--
-																				<tr class="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 4.0</td>
-                                            <td>Win 95+</td>
-                                            <td>4</td>
-
-                                        </tr>
-                                        <tr class="even gradeC">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.0</td>
-                                            <td>Win 95+</td>
-                                            <td>5</td>
-
-                                        </tr>
-																			-->
-
-                                    </tbody>
+                                       <td class="center"><a href="<?php echo base_url('service_center/store/'.$row->id); ?>"> Edit </a> &nbsp; | &nbsp; <a href="<?php echo base_url('service_center/delete/'.$row->id); ?>"> Delete </a></td>
+                                     </tr>
+                                     <?php
+                                     }
+                                     ?>
+                                   </tbody>
                                 </table>
                             </div>
                         </div>
